@@ -97,7 +97,9 @@
  * @package PiwikTracker
  * @api
  */
-class Tx_Piwik_PiwikApi_PiwikTracker
+
+namespace Kaystrobach\Piwik\PiwikApi;
+class PiwikTracker
 {
     /**
      * Piwik base URL, for example http://example.org/piwik/

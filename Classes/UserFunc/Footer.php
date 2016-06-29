@@ -32,7 +32,8 @@
  * @author Joerg Winter <winter@b-net1.de>
  * @author Kay Strobach <typo3@kay-strobach.de>
  */
-class tx_Piwik_UserFunc_Footer {
+namespace Kaystrobach\Piwik\UserFunc;
+class Footer {
 
 	/** @var \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer */
 	public $cObj;
@@ -40,7 +41,7 @@ class tx_Piwik_UserFunc_Footer {
 	/**
 	 * Piwik PHP Tracking Code for generating the tracking image
 	 *
-	 * @var Tx_Piwik_PiwikApi_PiwikTracker
+	 * @var Kaystrobach\Piwik\PiwikApi\PiwikTracker
 	 */
 	protected $piwikTracker;
 
@@ -417,7 +418,7 @@ class tx_Piwik_UserFunc_Footer {
 	 */
 	protected function initializePiwikTracker() {
 		$this->piwikTracker = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-			'Tx_Piwik_PiwikApi_PiwikTracker',
+			Kaystrobach\Piwik\PiwikApi\PiwikTracker::class,
 			$this->getPiwikIDSite(),
 			$this->piwikOptions['piwik_host']
 		);
