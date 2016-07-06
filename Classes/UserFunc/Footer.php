@@ -41,7 +41,7 @@ class Footer {
 	/**
 	 * Piwik PHP Tracking Code for generating the tracking image
 	 *
-	 * @var Kaystrobach\Piwik\PiwikApi\PiwikTracker
+	 * @var \Kaystrobach\Piwik\PiwikApi\PiwikTracker
 	 */
 	protected $piwikTracker;
 
@@ -418,7 +418,7 @@ class Footer {
 	 */
 	protected function initializePiwikTracker() {
 		$this->piwikTracker = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-			Kaystrobach\Piwik\PiwikApi\PiwikTracker::class,
+			\Kaystrobach\Piwik\PiwikApi\PiwikTracker::class,
 			$this->getPiwikIDSite(),
 			$this->piwikOptions['piwik_host']
 		);
