@@ -19,6 +19,5 @@ page.footerData {
   854536 {
     20 = USER_INT
     20.userFunc    = Kaystrobach\Piwik\UserFunc\Footer->contentPostProc_output
-    20.includeLibs = EXT:piwik/Classes/UserFunc/Footer.php
   }
 }
